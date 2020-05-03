@@ -91,3 +91,13 @@ function avg(numAry) {
     }
     return numAvg/aryCount;
 }
+
+// 看MDN 中 Array method 沒有求長度，但才知道在Properties 有length 自己記錯了
+
+//function avg(numAry) {
+ //   let numAvg = 0;
+ //   for (const inputNum of numAry) {
+ //       numAvg += inputNum;
+ //   }
+ //   return numAvg/numAry.length;
+//}
