@@ -72,11 +72,22 @@ while(myroll!==rollResult){
 // }
 
 function isVaildPassword(inputPass, inputName) {
-    const tooSimliar = inputPass.includes(inputName) ; 
-    if (inputPass.length >= 8 && inputPass.indexOf(' ') === -1 && !tooSimliar ) {
+    const passNotIncName = !inputPass.includes(inputName) ; 
+    if (inputPass.length >= 8 && inputPass.indexOf(' ') === -1 && passNotIncName ) {
         return true;
     } 
     return false;
 }
 isVaildPassword('89Fjj1nms','dogLuvr');
 isVaildPassword('dogLuvr123!','dogLuvr');
+
+
+function avg(numAry) {
+    let numAvg = 0;
+    let aryCount = 0;
+    for (const inputNum of numAry) {
+        numAvg += inputNum;
+        aryCount++;
+    }
+    return numAvg/aryCount;
+}
