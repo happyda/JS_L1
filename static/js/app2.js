@@ -61,3 +61,22 @@ while(myroll!==rollResult){
     myroll = rollDie();
     console.log(`重丟：${myroll}`);
 }
+
+// 第一種寫法，但我在inputpass.includes(inputName) 遇到麻煩如果加入單引號反而會有問題，因為原本就是做為字串比較的功能
+// 如加入反而造成結果不同 例如出錯的寫法 'inputPass'.includes('inputName') 只要任何一邊加入單引號就造成判斷失常
+// function isVaildPassword(inputPass, inputName) {
+//     if (inputPass.length >= 8 && inputPass.indexOf(' ') === -1 && !inputPass.includes(inputName)) {
+//         return true;
+//     } 
+//     return false;
+// }
+
+function isVaildPassword(inputPass, inputName) {
+    const tooSimliar = inputPass.includes(inputName) ; 
+    if (inputPass.length >= 8 && inputPass.indexOf(' ') === -1 && !tooSimliar ) {
+        return true;
+    } 
+    return false;
+}
+isVaildPassword('89Fjj1nms','dogLuvr');
+isVaildPassword('dogLuvr123!','dogLuvr');
