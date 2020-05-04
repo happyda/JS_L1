@@ -10,17 +10,17 @@ const student = {
 
 const shoppingCart = [
     {
-        product : '大便',
+        product : '便當',
         price :  199,
         quantity : 1
     },
     {
-        product : '保險套',
+        product : '保險布套',
         price :  98,
         quantity : 12
     },
     {
-        product : '小便',
+        product : '便利貼',
         price :  1999,
         quantity : 6,
         100 : 100,
